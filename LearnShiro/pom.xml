@@ -19,6 +19,7 @@
         <module>shiro-mybatis-h2</module>
         <module>shiro-mybatis-mysql</module>
         <module>01-Shiro-ini</module>
+        <module>02-Shiro-realm</module>
     </modules>
 
     <properties>
@@ -28,9 +29,14 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-autoconfigure</artifactId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring-boot-starter</artifactId>
+            <version>1.4.0</version>
+        </dependency>
     </dependencies>
 
     <repositories>

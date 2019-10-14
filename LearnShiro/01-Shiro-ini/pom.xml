@@ -11,11 +11,4 @@
 
     <artifactId>01-Shiro-ini</artifactId>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-spring-boot-starter</artifactId>
-            <version>1.4.0</version>
-        </dependency>
-    </dependencies>
 </project>
