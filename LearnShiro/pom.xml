@@ -20,6 +20,7 @@
         <module>shiro-mybatis-mysql</module>
         <module>01-Shiro-ini</module>
         <module>02-Shiro-realm</module>
+        <module>03-Shiro-Role-Permission</module>
     </modules>
 
     <properties>
