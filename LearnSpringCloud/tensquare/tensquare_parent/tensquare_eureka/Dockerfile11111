@@ -1,0 +1,25 @@
+FROM maven:3.5-jdk-8
+
+#mkdir code
+RUN mkdir -p /project
+
+#解决时区问题
+ENV  TZ Asia/Shanghai
+
+ADD . /project
+
+WORKDIR project
+
+RUN ls -al
+
+RUN mvn clean package -Dmaven.test.skip=true -U
+
+RUN ls -al
+
+RUN ls -al target
+
+# add code
+ADD tensquare_eureka-1.0-SNAPSHOT.jar  /project/app.jar
+
+
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/project/app.jar"]
